@@ -91,7 +91,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('css/common-[hash].css'), // 单独使用link标签加载css并设置路径，
+       // new ExtractTextPlugin('css/common-[hash].css'), // 单独使用link标签加载css并设置路径，
         new HtmlWebpackPlugin({ // 根据模板插入css/js等生成最终HTML
             filename: './index.html', // 生成的html存放路径，相对于path
             template: './src/index.html', // html模板路径
@@ -124,6 +124,8 @@ module.exports = {
 }
 if (process.env.NODE_ENV === 'production') {
 	console.log("ttt")
+    console.log('> Starting dev server...')
+    console.log('> localhsot:9090')
     module.exports.devtool = '#source-map';
     module.exports.plugins = (module.exports.plugins || []).concat([
         // new webpack.DefinePlugin({

@@ -1,0 +1,10 @@
+npm run dev #可以开启webpack的热加载，访问地址：http://localhost:9090/news_html/
+npm run webpack #webpack打包，
+npm run 下面的几种打包方式：
+   "dev": "webpack-dev-server",
+    "bundle": "webpack", //普通打包
+    "webpack": "cross-env NODE_ENV=production webpack",  /*生产环境下的打包*/
+    "webpack:p": "node deleteHistoryFile.js --targets=./dist,test2 && webpack",
+    "del": "node deleteHistoryFile.js",
+    "build": "cross-env NODE_ENV=development babel-node ./node_modules/webpack/bin/webpack", /*开发环境下的打包*/
+    "test": "node deleteHistoryFile.js && cross-env NODE_ENV=production webpack"  //删除开发环境下的历史包，然后再生成新包

@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-news_html
+/news_html
 .DS_Store
 .idea
 # testing
