@@ -9,7 +9,7 @@
     "webpack": "cross-env NODE_ENV=production webpack",
     "webpack:p": "node deleteHistoryFile.js --targets=./dist,test2 && webpack",
     "del": "node deleteHistoryFile.js",
-    "build": "cross-env NODE_ENV=development babel-node ./node_modules/webpack/bin/webpack",
+    "build": "cross-env NODE_ENV=development webpack",
     "test": "node deleteHistoryFile.js && cross-env NODE_ENV=production webpack"
   },
   "repository": {

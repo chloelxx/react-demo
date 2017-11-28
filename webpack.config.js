@@ -91,7 +91,7 @@ module.exports = {
         ]
     },
     plugins: [
-       // new ExtractTextPlugin('css/common-[hash].css'), // 单独使用link标签加载css并设置路径，
+        new ExtractTextPlugin('css/common-[hash].css'), // 单独使用link标签加载css并设置路径，
         new HtmlWebpackPlugin({ // 根据模板插入css/js等生成最终HTML
             filename: './index.html', // 生成的html存放路径，相对于path
             template: './src/index.html', // html模板路径
@@ -114,7 +114,7 @@ module.exports = {
     ],
    // 使用webpack-dev-server，提高开发效率
     devServer: {
-     contentBase: './',
+     // contentBase: '/news_html/',
      host: 'localhost',
      port: 9090,
      inline: true,
